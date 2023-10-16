@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_app/core/colors/colors.dart';
 import 'package:netflix_app/presentation/downloads/widgets/screen_downloads.dart';
 import 'package:netflix_app/presentation/fast_laughs/screen_fast_laughs.dart';
 import 'package:netflix_app/presentation/home/screen_home.dart';
@@ -10,7 +9,7 @@ import 'package:netflix_app/presentation/search/screen_search.dart';
 class ScreenMainPage extends StatelessWidget {
   ScreenMainPage({super.key});
 
-  final pages = const [
+  final pages = [
     ScreenHome(),
     ScreenNewAndHot(),
     ScreenFastLaughs(),

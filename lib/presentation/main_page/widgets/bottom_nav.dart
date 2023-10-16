@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 ValueNotifier<int> indexChangeNotifier = ValueNotifier(0);
 
@@ -24,25 +25,25 @@ class BottomNavigationWidget extends StatelessWidget {
           unselectedIconTheme: const IconThemeData(color: Colors.grey),
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              label: 'Home',
-            ),
+                icon: Icon(Icons.home_outlined),
+                label: 'Home',
+                activeIcon: Icon(Icons.home_filled)),
             BottomNavigationBarItem(
-              icon: Icon(Icons.collections_outlined),
-              label: 'New & Hot',
-            ),
+                icon: Icon(Icons.video_collection_outlined),
+                label: 'New & Hot',
+                activeIcon: Icon(Icons.video_collection)),
             BottomNavigationBarItem(
-              icon: Icon(Icons.emoji_emotions_outlined),
-              label: 'Fast Laughs',
-            ),
+                icon: Icon(Icons.emoji_emotions_outlined),
+                label: 'Fast Laughs',
+                activeIcon: Icon(Icons.emoji_emotions)),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Search',
-            ),
+                icon: Icon(Ionicons.search_outline),
+                label: 'Search',
+                activeIcon: Icon(Ionicons.search)),
             BottomNavigationBarItem(
-              icon: Icon(Icons.arrow_circle_down_outlined),
-              label: 'Downloads',
-            )
+                icon: Icon(Ionicons.arrow_down_circle_outline),
+                label: 'Downloads',
+                activeIcon: Icon(Ionicons.arrow_down_circle))
           ],
         );
       },
