@@ -12,3 +12,10 @@ const kHeight = SizedBox(
 const kWidthTile = SizedBox(
   width: 15,
 );
+
+const kHeight10 = SizedBox(
+  height: 10,
+);
+//border radius
+
+BorderRadius kRadius10 = BorderRadius.circular(10);
