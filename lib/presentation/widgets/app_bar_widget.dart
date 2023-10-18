@@ -14,7 +14,8 @@ class AppBarWidget extends StatelessWidget {
         kWidth,
         Text(
           title,
-          style: GoogleFonts.archivoBlack(fontSize: 30),
+          style: GoogleFonts.libreFranklin(
+              fontSize: 30, fontWeight: FontWeight.bold),
         ),
         const Spacer(),
         const Icon(

@@ -5,11 +5,17 @@ import 'package:netflix_app/core/constants.dart';
 class MainIconButtonWidget extends StatelessWidget {
   final IconData icon;
   final String text;
-  const MainIconButtonWidget({
-    super.key,
-    required this.icon,
-    required this.text,
-  });
+  final double iconSize;
+  final double textSize;
+  final Color color;
+
+  const MainIconButtonWidget(
+      {super.key,
+      required this.icon,
+      required this.text,
+      this.iconSize = 25,
+      this.textSize = 15,
+      this.color = kWHiteColor});
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +24,15 @@ class MainIconButtonWidget extends StatelessWidget {
         Icon(
           icon,
           color: kWHiteColor,
-          size: 25,
+          size: iconSize,
         ),
         kHeight4,
         Text(
           text,
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FontWeight.bold,
+            fontSize: textSize,
+            color: color,
           ),
         )
       ],

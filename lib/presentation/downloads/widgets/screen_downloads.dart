@@ -17,21 +17,24 @@ class ScreenDownloads extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50),
-          child: AppBarWidget(
-            title: 'Downloads',
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+      child: Scaffold(
+          appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(50),
+            child: AppBarWidget(
+              title: 'Downloads',
+            ),
           ),
-        ),
-        body: ListView.separated(
-          padding: const EdgeInsets.fromLTRB(5, 15, 5, 0),
-          itemBuilder: (context, index) => widgets[index],
-          separatorBuilder: (context, index) => const SizedBox(
-            height: 30,
-          ),
-          itemCount: widgets.length,
-        ));
+          body: ListView.separated(
+            padding: const EdgeInsets.fromLTRB(5, 15, 5, 0),
+            itemBuilder: (context, index) => widgets[index],
+            separatorBuilder: (context, index) => const SizedBox(
+              height: 30,
+            ),
+            itemCount: widgets.length,
+          )),
+    );
   }
 }
 
