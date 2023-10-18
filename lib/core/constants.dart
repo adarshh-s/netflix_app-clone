@@ -13,9 +13,22 @@ const kWidthTile = SizedBox(
   width: 15,
 );
 
+const kWidth22 = SizedBox(
+  width: 22,
+);
+
+const kHeight4 = SizedBox(
+  height: 4,
+);
+
 const kHeight10 = SizedBox(
   height: 10,
 );
 //border radius
 
 BorderRadius kRadius10 = BorderRadius.circular(10);
+
+//images
+
+const KmainImage =
+    'https://www.themoviedb.org/t/p/original/5Y3baQKpVHl1xjIhsHJ08FyXJ9J.jpg';

@@ -18,7 +18,7 @@ class MainCard extends StatelessWidget {
         image: const DecorationImage(
           fit: BoxFit.cover,
           image: NetworkImage(
-              'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ygO9lowFMXWymATCrhoQXd6gCEh.jpg'),
+              'https://www.themoviedb.org/t/p/original/f19253brBdpruze3QTmHJKwdSil.jpg'),
         ),
       ),
     );

@@ -33,11 +33,15 @@ class NumberCard extends StatelessWidget {
           ],
         ),
         Positioned(
-          left: 0,
+          left: 5,
           top: 98,
           child: StrokeText(
             text: '${index + 1}',
-            textStyle: const TextStyle(fontSize: 140, color: Colors.black),
+            textStyle: const TextStyle(
+              fontSize: 140,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
             strokeColor: kWHiteColor,
             strokeWidth: 7,
           ),
