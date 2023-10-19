@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix_app/core/colors/colors.dart';
 import 'package:netflix_app/core/constants.dart';
 import 'package:netflix_app/presentation/home/widgets/custom_icon_button_widget.dart';
+import 'package:netflix_app/presentation/widgets/video_widget.dart';
 
 class ComingSoonCard extends StatelessWidget {
   const ComingSoonCard({
@@ -48,37 +49,7 @@ class ComingSoonCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 kHeightTile,
-                Stack(
-                  children: [
-                    const SizedBox(
-                      width: double.infinity,
-                      height: 200,
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                              'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/tl0mg7lOnS6tP8ngH0QwgMLQdpV.jpg',
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      right: 5,
-                      bottom: 5,
-                      child: CircleAvatar(
-                        backgroundColor: Colors.black.withOpacity(0.8),
-                        radius: 20,
-                        child: const Icon(
-                          CupertinoIcons.volume_down,
-                          color: kWHiteColor,
-                          size: 20,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                const VideoWidget(image: vImage1),
                 kHeight,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,7 +73,7 @@ class ComingSoonCard extends StatelessWidget {
                       ),
                     ),*/
                     ,
-                    Spacer(),
+                    const Spacer(),
                     const Row(
                       children: [
                         MainIconButtonWidget(

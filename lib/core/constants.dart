@@ -21,6 +21,10 @@ const kHeight4 = SizedBox(
   height: 4,
 );
 
+const kHeight60 = SizedBox(
+  height: 60,
+);
+
 const kHeight10 = SizedBox(
   height: 10,
 );
@@ -36,3 +40,8 @@ BorderRadius kRadius30 = BorderRadius.circular(30);
 
 const KmainImage =
     'https://www.themoviedb.org/t/p/original/5Y3baQKpVHl1xjIhsHJ08FyXJ9J.jpg';
+
+const vImage1 =
+    'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/tl0mg7lOnS6tP8ngH0QwgMLQdpV.jpg';
+const vImage2 =
+    'https://artworks.thetvdb.com/banners/series/359913/backgrounds/62100581.jpg';
