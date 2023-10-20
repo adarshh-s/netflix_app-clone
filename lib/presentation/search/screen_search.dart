@@ -30,8 +30,8 @@ class ScreenSearch extends StatelessWidget {
             style: const TextStyle(color: kWHiteColor),
           ),
           kHeight,
-          //const Expanded(child: SearchIdleWidget()),
-          const Expanded(child: SearchResultWidget())
+          const Expanded(child: SearchIdleWidget()),
+          //const Expanded(child: SearchResultWidget())
         ],
       ),
     )));

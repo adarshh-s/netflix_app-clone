@@ -9,7 +9,7 @@ class EveryOnesWatching extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      itemBuilder: (context, index) => EveryonesWatchingCard(),
+      itemBuilder: (context, index) => const EveryonesWatchingCard(),
       separatorBuilder: (context, index) => kHeight60,
       itemCount: 10,
     );
