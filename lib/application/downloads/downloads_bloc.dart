@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
@@ -25,7 +27,7 @@ class DownloadsBloc extends Bloc<DownloadsEvent, DownloadState> {
       );
       final Either<MainFailures, List<Downloads>> downloadsOption =
           await _downloadsRepo.getDownloadsImage();
-
+      print(downloadsOption.toString());
       emit(
         downloadsOption.fold(
           (failure) => state.copyWith(

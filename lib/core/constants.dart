@@ -45,3 +45,5 @@ const vImage1 =
     'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/tl0mg7lOnS6tP8ngH0QwgMLQdpV.jpg';
 const vImage2 =
     'https://artworks.thetvdb.com/banners/series/359913/backgrounds/62100581.jpg';
+
+const imageAppendUrl = 'https://image.tmdb.org/t/p/w500';
