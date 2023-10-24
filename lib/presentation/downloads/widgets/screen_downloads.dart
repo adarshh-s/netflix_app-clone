@@ -75,41 +75,36 @@ class Section2 extends StatelessWidget {
               width: size.width,
               child: state.isLoading
                   ? const Center(child: CircularProgressIndicator())
-                  : state.downloads.isNotEmpty // Check if the list is not empty
-                      ? Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            CircleAvatar(
-                              radius: size.width * 0.43,
-                              backgroundColor: Colors.grey.withOpacity(0.5),
-                            ),
-                            DownloadsImageWidget(
-                              imageList:
-                                  '$imageAppendUrl${state.downloads[2].posterPath}',
-                              margin:
-                                  const EdgeInsets.only(left: 190, bottom: 0),
-                              size: Size(size.width * .39, size.width * .55),
-                              angle: 25,
-                            ),
-                            DownloadsImageWidget(
-                              imageList:
-                                  '$imageAppendUrl${state.downloads[1].posterPath}',
-                              margin:
-                                  const EdgeInsets.only(right: 190, bottom: 0),
-                              size: Size(size.width * .39, size.width * .55),
-                              angle: -25,
-                            ),
-                            DownloadsImageWidget(
-                              imageList:
-                                  '$imageAppendUrl${state.downloads[0].posterPath}',
-                              margin:
-                                  const EdgeInsets.only(top: 60, bottom: 20),
-                              size: Size(size.width * .45, size.width * .65),
-                              borderRadius: 15,
-                            )
-                          ],
+                  : Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        CircleAvatar(
+                          radius: size.width * 0.43,
+                          backgroundColor: Colors.grey.withOpacity(0.5),
+                        ),
+                        DownloadsImageWidget(
+                          imageList:
+                              '$imageAppendUrl${state.downloads[2].posterPath}',
+                          margin: const EdgeInsets.only(left: 190, bottom: 0),
+                          size: Size(size.width * .39, size.width * .55),
+                          angle: 25,
+                        ),
+                        DownloadsImageWidget(
+                          imageList:
+                              '$imageAppendUrl${state.downloads[1].posterPath}',
+                          margin: const EdgeInsets.only(right: 190, bottom: 0),
+                          size: Size(size.width * .39, size.width * .55),
+                          angle: -25,
+                        ),
+                        DownloadsImageWidget(
+                          imageList:
+                              '$imageAppendUrl${state.downloads[0].posterPath}',
+                          margin: const EdgeInsets.only(top: 60, bottom: 20),
+                          size: Size(size.width * .45, size.width * .65),
+                          borderRadius: 15,
                         )
-                      : const Text('No downloads available'),
+                      ],
+                    ),
             );
           },
         )
