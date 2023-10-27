@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:netflix_app/core/constants.dart';
 import 'package:netflix_app/core/string.dart';
 
 part 'search_response.g.dart';
@@ -28,7 +29,7 @@ class SearchResultData {
   @JsonKey(name: 'poster_path')
   String? posterPath;
 
-  String get posterImageURL => '$baseUrl$posterPath';
+  String get posterImageURL => '$imageAppendUrl$posterPath';
 
   SearchResultData({
     this.id,

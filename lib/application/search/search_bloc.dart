@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -54,8 +56,32 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     });
 
     //search result state
-    on<SearchMulti>((event, emit) {
-      searchSerice.searchMulti(queryMulti: event.queryMulti);
+    on<SearchMulti>((event, emit) async {
+      log('search fpr ${event.queryMulti}');
+      emit(const SearchState(
+        searchResultList: [],
+        idleList: [],
+        isLoading: true,
+        isError: false,
+      ));
+      final result =
+          await searchSerice.searchMulti(queryMulti: event.queryMulti);
+      final state = result.fold((MainFailures f) {
+        return const SearchState(
+          searchResultList: [],
+          idleList: [],
+          isLoading: false,
+          isError: true,
+        );
+      }, (SearchResponse r) {
+        return SearchState(
+          searchResultList: r.results,
+          idleList: [],
+          isLoading: false,
+          isError: false,
+        );
+      });
+      emit(state);
     });
   }
 }
